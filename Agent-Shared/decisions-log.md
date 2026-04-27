@@ -4,6 +4,50 @@
 
 ---
 
+## 2026-04-27 — Foco: Solo 2 tracks (Nova + Fiverr UGC)
+
+**Decision:** Concentrar toda la ejecución en Track A (Nova AI Voice) y Track B (Fiverr UGC + VEO 3). Descartar YouTube faceless, Nano Banana y otros proyectos por ahora.
+
+**Context:**
+- $0 revenue después de semanas de infraestructura y planeación
+- Demasiados frentes abiertos en paralelo
+- VEO 3 credits se vencen mensualmente si no se usan
+
+**Alternatives Considered:**
+1. YouTube faceless → rechazado (6-12 meses para monetizar, distrae)
+2. Nano Banana → rechazado (sin ventaja clara, sin documentación)
+3. Los 3 tracks a la vez → rechazado (dilución de foco)
+
+**Rationale:**
+- Nova AI Voice: mayor ceiling de revenue, todo el research ya hecho, solo falta ejecutar sales
+- Fiverr UGC: cashflow rápido (1-2 semanas), aprovecha créditos perecederos, usa skills de marketing existentes
+
+**Expected Outcome:**
+- Semana 2: primer email batch enviado + gig Fiverr publicado
+- Semana 3-4: primer reply o primera order
+- Semana 6: primer cliente paying Nova o $200+ en Fiverr
+
+**Owner:** Hermes + Tien
+
+**Status:** ✅ Done — Plan documentado en `orchestration-plan.md`
+
+**Follow-up:**
+- [ ] Wolf: 30 clínicas researched esta semana
+- [ ] Clowy: 3 videos VEO 3 portfolio esta semana
+- [ ] Hermes: review viernes 2026-05-03
+
+---
+
+## 2026-04-27 — Claude Code conectado al vault
+
+**Decision:** Integrar Claude Code (Windows) como agente del vault con carpeta `Agent-Claude/`.
+
+**Context:** Vault estaba configurado con path WSL incorrecto (`/mnt/d/...`). Corrección hecha + plugin `obsidian@obsidian-skills` habilitado.
+
+**Status:** ✅ Done
+
+---
+
 ## 2026-04-24 — Create Wolf (CRO / Sales Agent)
 
 **Decision:** Create Wolf as the first revenue-focused agent.

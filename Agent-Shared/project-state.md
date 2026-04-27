@@ -6,89 +6,76 @@
 
 ## 🎯 North Star Metric
 
-**Goal:** $100/week revenue  
-**Current:** $0/week  
-**Progress:** 0%  
-**Days Running:** 0 (starting Apr 24, 2026)
+**Goal:** $100/week revenue (semana 1) → escalar a $1k/semana
+**Current:** $0/week
+**Progress:** 0%
+**Days Running:** 0 (re-launch focused 2026-04-27)
+
+> **Foco actual decidido 2026-04-27:** Solo 2 tracks. Ver `orchestration-plan.md`.
 
 ---
 
-## 🚀 Active Projects
+## 🚀 Active Projects (focused)
 
-### 1. Wolf Launch (Revenue Engine)
-**Owner:** Wolf + Tien  
-**Status:** 🟡 In Progress  
-**Priority:** 🔴 CRITICAL  
+### Track A — Nova AI Voice
+**Owner:** Wolf (sales) → Clowy (delivery)
+**Status:** 🟡 In Progress (sales not started)
+**Priority:** 🔴 CRITICAL
+**Time-to-cash:** 3-6 semanas
 
-**Tasks:**
-- [x] Create Wolf agent (SOUL, IDENTITY, etc.)
-- [x] Register in OpenClaw
-- [x] Add to Mission Control
-- [ ] Setup email infrastructure
-- [ ] Write cold email templates (3 variants)
-- [ ] Build follow-up sequence (5 emails)
-- [ ] Research ICP (Ideal Customer Profile)
-- [ ] Launch first campaign (100 emails)
-- [ ] First meeting booked
-- [ ] First deal closed
+**Esta semana:**
+- [ ] Wolf: 30 clínicas researched (US, ortodoncia)
+- [ ] Wolf: 1 cold email template draft
+- [ ] Wolf: setup email infrastructure (warmup domain)
+- [ ] Hermes: definir lista de ciudades target
 
-**Blockers:** None  
-**Next Action:** Write cold email templates  
+**Próximas semanas:**
+- Semana 2: 50 emails enviados, demo Chloe en novaaivoice.com listo
+- Semana 3: primer demo booked
+- Semana 4-6: primer trial → primer paid
 
----
-
-### 2. Mission Control Dashboard
-**Owner:** Clowy  
-**Status:** 🟢 Deployed  
-**Priority:** 🟡 HIGH  
-
-**Tasks:**
-- [x] Build UI (Agents, Tasks, Projects, Workflow)
-- [x] Create agent creation backend
-- [x] Integrate with OpenClaw CLI
-- [ ] Connect real-time agent status API
-- [ ] Add sessions_send for agent comms
-- [ ] Deploy to public domain
-
-**Blockers:** None  
-**Next Action:** Test Wolf creation from UI  
+**Blockers:** Email infra setup
+**Métricas:** Ver `orchestration-plan.md` § Track A
 
 ---
 
-### 3. Fiverr Gig Setup
-**Owner:** Wolf (copy) + Clowy (delivery)  
-**Status:** ⚪ Not Started  
-**Priority:** 🟡 HIGH  
+### Track B — Fiverr UGC + VEO 3
+**Owner:** Wolf (gig setup) → Clowy (delivery) → Tien (generation)
+**Status:** 🟡 In Progress (setup phase)
+**Priority:** 🟠 HIGH
+**Time-to-cash:** 1-2 semanas
 
-**Tasks:**
-- [ ] Define service offerings (AI video, voice agents, automation)
-- [ ] Write gig descriptions (3 gigs)
-- [ ] Create pricing tiers
-- [ ] Design thumbnails (Pixel needed)
-- [ ] Launch gigs
-- [ ] First order received
+**Esta semana:**
+- [ ] Wolf: gig copy + pricing tiers ($50/$100/$150)
+- [ ] Tien: verificar 3 cuentas AI Studio tienen VEO 3 disponible
+- [ ] Clowy: generar 3 videos portfolio diferentes estilos
+- [ ] Wolf: thumbnails para gig
 
-**Blockers:** Need gig copy from Wolf  
-**Next Action:** Wolf to write gig descriptions  
+**Próximas semanas:**
+- Semana 2: gig publicado en Fiverr
+- Semana 3: primera order recibida (target)
+
+**Blockers:** Confirmar disponibilidad VEO 3 en cuentas
+**Métricas:** Ver `orchestration-plan.md` § Track B
 
 ---
 
-### 4. Veo 3 Content Pipeline
-**Owner:** TBD  
-**Status:** ⚪ Not Started  
-**Priority:** 🟢 MEDIUM  
+### Sistema interno (mantenimiento, NO foco)
 
-**Context:** 3,000 Veo 3 credits available (~150 videos)
+**Mission Control Dashboard** — 🟢 Deployed v7.0
+**OpenClaw infra** — 🟢 Running con Minimax
+**Vault de Obsidian** — 🟢 Conectado a Claude Code (2026-04-27)
 
-**Tasks:**
-- [ ] Define content strategy (niche, format)
-- [ ] Create first 10 videos
-- [ ] Upload to YouTube/TikTok
-- [ ] Monetization setup
-- [ ] Scale to daily uploads
+No tocar a menos que rompa. No agregar features.
 
-**Blockers:** Need owner assigned  
-**Next Action:** Assign owner (Hermes decision)  
+---
+
+## 🛑 Lo que NO se hace este mes
+
+- YouTube faceless channel
+- Nano Banana
+- Crear más agentes (Scout, Quill, Pixel, Echo) — esperar triggers
+- Refactor de vault — esperar resultados de tracks A+B
 
 ---
 
