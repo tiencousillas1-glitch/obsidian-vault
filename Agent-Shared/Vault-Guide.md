@@ -1,223 +1,56 @@
-# Vault de Conocimiento — Guía para Agentes
-
-> Adaptado de [claude-obsidian](https://github.com/AgriciDaniel/claude-obsidian) por AgriciDaniel
-> Basado en el patrón LLM Wiki de Andrej Karpathy
-
----
-
-## Concepto Central
-
-El vault es un **cerebro de conocimiento persistente y acumulativo**. Cada vez que Tien da información, hace un proyecto, o cierra un cliente, eso se integra al vault. Cada pregunta que se hace tira de todo lo que se sabe. El conocimiento se compostea como interés.
-
----
+# Vault Guide — Obsidian Knowledge Base
 
 ## Estructura del Vault
 
 ```
 Obsidian Vault/
-├── Agent-Hermes/       ← Hermes (este agente)
-├── Agent-Claude/       ← Claude Code en Windows
-├── Agent-Clowy/        ← Clowy (OpenClaw)
-├── Agent-Wolf/         ← Wolf (OpenClaw)
-├── Agent-Polytrader/   ← Polytrader (OpenClaw)
-├── Agent-Shared/       ← ⚡ PROTOCOLO PARA TODOS — leer primero
-│   ├── PROTOCOL.md     ← Reglas de uso del vault
-│   └── INDEX.md        ← Catálogo maestro de todo el vault
-└── projects/           ← Proyectos activos de Tien
-    ├── nova-ai-voice/  ← Nova AI Voice
-    ├── fiverr-ugc/     ← Fiverr UGC videos
-    └── <nuevo>/        ← Nuevos proyectos van aquí
+├── Agent-Shared/        ← INFO COMPARTIDA (todos leen/escriben)
+│   ├── Index.md           Mapa del vault
+│   ├── Vault-Guide.md     Esta guía
+│   ├── orchestration-plan.md
+│   ├── project-state.md
+│   ├── decisions-log.md
+│   └── user-profile.md
+├── Agent-Hermes/        ← Carpeta privada de Hermes
+├── Agent-Clowy/         ← Carpeta privada de Clowy
+├── Agent-Codex/         ← Carpeta privada de Codex
+├── Agent-Wolf/          ← Carpeta privada de Wolf
+├── Agent-Polytrader/    ← Carpeta privada de Polytrader
+├── Agent-Claude/        ← Carpeta privada de Claude Code
+├── daily/               ← Notas diarias (YYYY-MM-DD.md)
+└── projects/            ← Documentación de proyectos
 ```
-
----
-
-## Convenciones Clave
-
-### Hot Cache (Memoria de Sesión)
-- **Archivo:** `Agent-Hermes/hot.md` (para Hermes)
-- **Qué es:** Al final de cada sesión, el agente escribe un resumen de contexto reciente
-- **Al iniciar:** Leer `hot.md` primero — restaura contexto sin que Tien repita
-
-### Flujo de Trabajo por Proyecto
-
-Para cada proyecto nuevo:
-
-1. **Crear carpeta** en `projects/<nombre-proyecto>/`
-2. **Crear `INDEX.md`** con:
-   - Objetivo del proyecto
-   - Estado actual
-   - Próximo paso
-   - Blockers (si hay)
-3. **Guardar en `hot.md`** al final de cada sesión
-
-### Save Workflow (Cómo Guardar Conversaciones)
-
-Cuando Tien dice algo importante:
-
-1. Crear nota en `projects/<proyecto>/<tema>.md`
-2. Usar formato:
-
-```markdown
----
-created: 2026-04-27
-source: Telegram
-project: nova-ai-voice
-type: decision
----
-
-# Decisión: Pricing de Nova AI Voice
-
-Tien decidió:
-- Setup fee: $300
-- Monthly: $297 / $497 / $700
-- 14-day free trial
-
-Fecha: 2026-04-27
-```
-
-### Query Workflow (Cómo Responder Preguntas)
-
-Cuando Tien pregunta algo:
-
-1. Leer `Agent-Shared/INDEX.md` primero
-2. Si no alcanza, ir a `projects/<proyecto>/INDEX.md`
-3. Buscar en páginas relevantes
-4. Responder citando fuentes específicas del vault
-
-### Lint (Chequeo de Salud) — Mensual
-
-Buscar:
-- Notas huérfanas (nadie las linkea)
-- Links rotos
-- Información desactualizada
-- Decisiones tomadas que no se registraron
-
----
-
-## Comandos Adaptados para Cada Agente
-
-| Acción | Qué hacer |
-|--------|-----------|
-| **Nueva información de Tien** | Guardar en `projects/<proyecto>/` + actualizar `hot.md` |
-| **Nueva decisión** | Registrar en `Agent-Shared/decisions-log.md` |
-| **Nuevo lead/prospecto** | Crear nota en `projects/<proyecto>/leads/<nombre>.md` |
-| **Nuevo cliente** | Crear carpeta en `projects/<proyecto>/clients/<nombre>.md` |
-| **Error o mistake** | Registrar en `Agent-Hermes/mistakes.md` |
-| **Al terminar sesión** | Actualizar `hot.md` con resumen de sesión |
-
----
-
-## Plantillas
-
-### Nota de Proyecto
-```markdown
----
-created: YYYY-MM-DD
-status: active|paused|completed
-project: nombre
----
-
-# Proyecto: [Nombre]
-
-## Objetivo
-[Qué se quiere lograr]
-
-## Estado Actual
-[Qué pasó esta semana]
-
-## Próximo Paso
-[Una sola acción]
-
-## Blockers
-[Nada] o [Qué está bloqueando]
-
-## Decisiones Tomadas
-- [Decisión] — [Fecha]
-```
-
-### Nota de Lead/Prospecto
-```markdown
----
-created: YYYY-MM-DD
-status: new|contacted|demo|won|lost
-project: nova-ai-voice
-type: lead
----
-
-# Lead: [Nombre de Clínica]
-
-## Datos
-- **Ubicación:** Ciudad, País
-- **Contacto:** Nombre, Teléfono, Email
-- **Fuente:** Cómo llegó
-
-## Estado
-[new|contacted|demo|won|lost]
-
-## Notas
-[Conversaciones, objeciones, siguiente paso]
-
-## Última Actualización
-YYYY-MM-DD
-```
-
-### Nota de Decisión
-```markdown
----
-created: YYYY-MM-DD
-project: [proyecto]
-type: decision
----
-
-# Decisión: [Título]
-
-## Contexto
-[Por qué se tomó esta decisión]
-
-## Decisión
-[Qué se decidió]
-
-## Fecha
-YYYY-MM-DD
-
-## Involucrados
-[Quién participó]
-```
-
----
 
 ## Reglas de Oro
 
-1. **Todo va al vault** — Si no está en el vault, no existe para los agentes
-2. **Una fuente** — Cada nota tiene `source: <origen>` en el frontmatter
-3. **Linkear** — Usar `[[wikilinks]]` para conectar notas relacionadas
-4. **Estado visible** — El frontmatter siempre tiene `status` actualizado
-5. **Hot cache al cerrar** — Siempre actualizar `hot.md` antes de terminar
+1. **Cada agente escribe en SU carpeta** y en `Agent-Shared/`
+2. **NUNCA editar la carpeta de otro agente** sin permiso explícito
+3. **Agent-Shared** es para info que TODOS necesitan: contexto proyectos, decisiones, estado
+4. **Git sync cada 30 min** — VPS ↔ GitHub ↔ Windows (Obsidian app)
+5. **Conflictos**: si hay merge conflict, el agente QUE ESCRIBIÓ ÚLTIMO gana
 
----
+## Protocolo de Git Sync
 
-## Proyecto: Nova AI Voice — Estructura Sugerida
+### Para agentes en VPS (Hermes, cronjobs):
+- Pull al inicio de cada sesión
+- Push después de cada escritura importante
+- El cronjob de Hermes hace sync automático cada 30 min
 
-```
-projects/nova-ai-voice/
-├── INDEX.md                    ← Estado general
-├── positioning.md              ← Mensajes de venta
-├── pricing.md                  ← $300 setup, $297/497/700 mensual
-├── clinics/
-│   ├── bogota-001.md         ← Primer prospecto Bogotá
-│   ├── medellin-001.md        ← Primer prospecto Medellín
-│   └── cartagena-001.md       ← Primer prospecto Cartagena
-└── outreach/
-    └── email-templates.md      ← Plantillas de email frío
-```
+### Para Codex (en ChatGPT):
+Codex NO tiene acceso directo al git del VPS. El flujo es:
 
----
+1. **Codex trabaja en su carpeta local** (ChatGPT sandbox)
+2. **Codex hace commit y push** al repo `obsidian-vault` en GitHub
+   - Repo: https://github.com/tiencousillas1-glitch/obsidian-vault
+   - Branch recomendado: `codex-updates`
+3. **Hermes hace pull** y mergea los cambios
+4. **Si hay conflictos**, Hermes resuelve manteniendo lo más reciente
 
-## Inspiración
+### Para Tien (en Windows con Obsidian):
+- Obsidian + plugin Git hace pull/push automático
+- Si Codex sube cambios, Obsidian los baja en el próximo sync
 
-- [Karpathy's LLM Wiki Pattern](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)
-- [claude-obsidian by AgriciDaniel](https://github.com/AgriciDaniel/claude-obsidian)
-
----
-
-*Última actualización: 2026-04-27*
+## Nombres de Archivos
+- Minúsculas, guiones medios: `working-context.md`, `project-state.md`
+- Daily notes: `YYYY-MM-DD.md` en `daily/`
+- Sin espacios en nombres de archivo
